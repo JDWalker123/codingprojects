@@ -1,0 +1,122 @@
+/* Template Styles */
+@import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
+
+body {
+    color: white;
+    background-color: #eedab5;
+    background-image: url(../images/wood-background.jpg);
+    background-attachment: fixed;
+}
+
+#container {
+    position: relative;
+    z-index: 10;
+    margin: 20px auto 20px auto;
+    width: 1040px; /* default without padding is 1040px */
+    height: auto;
+    font-family: "Kranky", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* padding: 15px;
+    border: 1px solid #111; */
+
+    /* CSS Grid */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 200px);
+    grid-auto-rows: 200px 
+                     75px 
+                     auto 
+                    150px;
+    grid-template-areas: 
+        "a b b b b"
+        "c c c c c"
+        "d d d d d"
+        "e e e e e";
+}
+
+#a, #b, #c, #d, #e {
+    z-index: 15;
+
+}
+
+#a {
+    grid-area: a;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 3em;
+    }
+}
+
+#b {
+    grid-area: b;
+    h1 {
+        font-size: 4em;
+        font-weight: 500;
+    }
+}
+
+#c {
+    grid-area: c;
+    a {
+    padding: 15px;
+    font-size: 2em;
+    font-weight: 500;
+    }
+
+}
+
+#d {
+    grid-area: d;
+    padding: 50px;
+    
+
+    h1 {
+        font-size: 2em;
+        font-weight: 500;
+        margin: 15px 0px 15px 0px;
+    }
+    
+    img {
+        width:100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+
+}
+
+#e {
+    grid-area: e;
+
+    h1 {
+        padding: 15px;
+    }
+    p {
+        
+    }
+}
+
+
+/* Classes */
+
+.rmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
