@@ -1,0 +1,288 @@
+/* Template Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body {
+    color: white;
+    background-color: white;
+    font-family: "Cascadia Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#background_vid {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-color: #111;
+}
+#container {
+    position: relative;
+    z-index: 10;
+    margin: 0px;
+    width: 98vw; 
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 90vh 100vh 90vh 25vh;
+    grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+}
+
+#a, #b, #c, #d, #e {
+    z-index: 15;
+}
+
+#a {
+    grid-area: a;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav > a {
+        font-size: 1.5em;
+        margin-right: 100px;
+        position: relative;
+        padding: 10px 20px;
+        overflow: hidden;
+    }
+
+    nav > a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #2EC1FF; 
+    transition: 0.3s;
+}
+
+    nav > a:hover::before {
+    width: 100%;
+}
+
+    nav > a:nth-child(1) {
+        margin-left: 150px;
+       
+    }
+
+
+}
+
+#b {
+    grid-area: b;
+
+    #name {
+        position: absolute;
+        top: 230px;
+        font-size: 7em;
+        margin-bottom: 25px;
+        transition: 0.3s ease;
+    }
+
+    #name:hover {
+    text-shadow: 0 0 20px rgba(76, 161, 175, 0.9),
+               0 0 30px rgba(76, 161, 175, 0.7);
+}
+
+    #schooling {
+        position: absolute;
+        top: 400px;
+        font-size: 2em;
+        margin-left: 15px;
+        transition: 0.3s ease;
+    }
+    #schooling:hover {
+    text-shadow: 0 0 20px rgba(76, 161, 175, 0.9),
+               0 0 30px rgba(76, 161, 175, 0.7);
+}
+
+    #schooling2 {
+        position: absolute;
+        top: 450px;
+        font-size: 1.5em;
+        margin-left: 20px;
+        transition: 0.3s ease;
+    }
+
+    #schooling2:hover {
+    text-shadow: 0 0 20px rgba(76, 161, 175, 0.9),
+               0 0 30px rgba(76, 161, 175, 0.7);
+}
+}
+
+#c {
+    grid-area: c;
+    margin: 0 auto;
+    width: 98.9vw;
+    background: linear-gradient(#000000, #3A3A3A);
+    position: relative;
+    overflow: hidden;
+    /*background-color: #081526;*/
+
+    img {
+        width: 40%;
+        position: absolute;
+        left: 100px;
+        animation: slideIn 2.5s ease-in forwards;
+    }
+
+    #languages {
+        font-size: 3em;
+        width: 40%;
+        text-align: center;
+        margin-bottom: 100px;
+        position: absolute;
+        right: 110px;
+        top: 230px;
+    }
+
+    p {
+        position: absolute;
+        width: 40%;
+        top: 530px;
+        right: 90px;
+        top: 400px;
+        text-indent: 25px;
+        font-size: 1em;
+        font-weight: 300;
+        text-align: justify;
+        line-height: 30px;
+    }
+    #languages::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #2EC1FF; 
+    transition: 0.3s;
+    }
+
+    #languages:hover::before {
+    width: 100%;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+#d {
+    grid-area: d;
+    /*background-color: #050A16;*/
+    background: linear-gradient(#3A3A3A, #6A6A6A);
+    overflow-x: hidden;
+
+    #languages2 {
+        font-size: 3em;
+        margin-bottom: 100px;
+        position: absolute;
+        left: 150px;
+        top: 20px;
+    }
+
+    #languages2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background: #2EC1FF; 
+        transition: 0.3s;
+    }
+
+    #languages2:hover::before {
+        width: 100%;
+    }
+    
+    img {
+        top: 0;
+        right: 90px;
+        width: 40%;
+        position: absolute;
+        overflow-y: hidden;
+        animation: slideIn 2.5s ease-in forwards;
+    }
+
+    
+
+    p {
+        position: absolute;
+        top: 140px;
+        left: 60px;
+        font-size: 1em;
+        line-height: 30px;
+        text-indent: 25px;
+        text-align: justify;
+        font-weight: 300;
+        width: 45%;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+
+#e {
+    grid-area: e;
+    background: linear-gradient(#6A6A6A, #B0B0B0,  #F2F2F2);
+
+    a {
+        margin-left: 35px;
+    }
+}
+
+
+/* Classes */
+
+.rmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
